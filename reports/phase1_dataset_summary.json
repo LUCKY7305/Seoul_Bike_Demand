@@ -1,0 +1,199 @@
+{
+  "filename": "SeoulBikeData.csv",
+  "md5_hash": "bf632307dcb419f67df589faaa0318e1",
+  "n_rows": 8760,
+  "n_cols": 14,
+  "memory_kb": 2607.8,
+  "columns": {
+    "Date": "object",
+    "Rented Bike Count": "int64",
+    "Hour": "int64",
+    "Temperature(°C)": "float64",
+    "Humidity(%)": "int64",
+    "Wind speed (m/s)": "float64",
+    "Visibility (10m)": "int64",
+    "Dew point temperature(°C)": "float64",
+    "Solar Radiation (MJ/m2)": "float64",
+    "Rainfall(mm)": "float64",
+    "Snowfall (cm)": "float64",
+    "Seasons": "object",
+    "Holiday": "object",
+    "Functioning Day": "object"
+  },
+  "target": {
+    "name": "Rented Bike Count",
+    "dtype": "int64",
+    "min": 0.0,
+    "max": 3556.0,
+    "mean": 704.6,
+    "median": 504.5,
+    "std": 645.0,
+    "zeros": 295,
+    "missing": 0
+  },
+  "dates": {
+    "column": "Date",
+    "min_date": "2017-12-01",
+    "max_date": "2018-11-30",
+    "unique_dates": 365,
+    "duplicate_timestamps": 0,
+    "hour_column": "Hour"
+  },
+  "total_missing": 0,
+  "missing_values": {
+    "Date": 0,
+    "Rented Bike Count": 0,
+    "Hour": 0,
+    "Temperature(°C)": 0,
+    "Humidity(%)": 0,
+    "Wind speed (m/s)": 0,
+    "Visibility (10m)": 0,
+    "Dew point temperature(°C)": 0,
+    "Solar Radiation (MJ/m2)": 0,
+    "Rainfall(mm)": 0,
+    "Snowfall (cm)": 0,
+    "Seasons": 0,
+    "Holiday": 0,
+    "Functioning Day": 0
+  },
+  "duplicate_rows": 0,
+  "negative_values": {
+    "Temperature(°C)": {
+      "count": 1433,
+      "min_value": -17.8
+    },
+    "Dew point temperature(°C)": {
+      "count": 3138,
+      "min_value": -30.6
+    }
+  },
+  "categorical_columns": {
+    "Seasons": {
+      "n_unique": 4,
+      "values": [
+        "Winter",
+        "Spring",
+        "Summer",
+        "Autumn"
+      ]
+    },
+    "Holiday": {
+      "n_unique": 2,
+      "values": [
+        "No Holiday",
+        "Holiday"
+      ]
+    },
+    "Functioning Day": {
+      "n_unique": 2,
+      "values": [
+        "Yes",
+        "No"
+      ]
+    }
+  },
+  "descriptive_stats": {
+    "Rented Bike Count": {
+      "count": 8760.0,
+      "mean": 704.6021,
+      "std": 644.9975,
+      "min": 0.0,
+      "25%": 191.0,
+      "50%": 504.5,
+      "75%": 1065.25,
+      "max": 3556.0
+    },
+    "Hour": {
+      "count": 8760.0,
+      "mean": 11.5,
+      "std": 6.9226,
+      "min": 0.0,
+      "25%": 5.75,
+      "50%": 11.5,
+      "75%": 17.25,
+      "max": 23.0
+    },
+    "Temperature(°C)": {
+      "count": 8760.0,
+      "mean": 12.8829,
+      "std": 11.9448,
+      "min": -17.8,
+      "25%": 3.5,
+      "50%": 13.7,
+      "75%": 22.5,
+      "max": 39.4
+    },
+    "Humidity(%)": {
+      "count": 8760.0,
+      "mean": 58.2263,
+      "std": 20.3624,
+      "min": 0.0,
+      "25%": 42.0,
+      "50%": 57.0,
+      "75%": 74.0,
+      "max": 98.0
+    },
+    "Wind speed (m/s)": {
+      "count": 8760.0,
+      "mean": 1.7249,
+      "std": 1.0363,
+      "min": 0.0,
+      "25%": 0.9,
+      "50%": 1.5,
+      "75%": 2.3,
+      "max": 7.4
+    },
+    "Visibility (10m)": {
+      "count": 8760.0,
+      "mean": 1436.8258,
+      "std": 608.2987,
+      "min": 27.0,
+      "25%": 940.0,
+      "50%": 1698.0,
+      "75%": 2000.0,
+      "max": 2000.0
+    },
+    "Dew point temperature(°C)": {
+      "count": 8760.0,
+      "mean": 4.0738,
+      "std": 13.0604,
+      "min": -30.6,
+      "25%": -4.7,
+      "50%": 5.1,
+      "75%": 14.8,
+      "max": 27.2
+    },
+    "Solar Radiation (MJ/m2)": {
+      "count": 8760.0,
+      "mean": 0.5691,
+      "std": 0.8687,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.01,
+      "75%": 0.93,
+      "max": 3.52
+    },
+    "Rainfall(mm)": {
+      "count": 8760.0,
+      "mean": 0.1487,
+      "std": 1.1282,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 35.0
+    },
+    "Snowfall (cm)": {
+      "count": 8760.0,
+      "mean": 0.0751,
+      "std": 0.4367,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 8.8
+    }
+  },
+  "issues": [],
+  "inspection_timestamp": "2026-10-22T20:08:29.657831"
+}

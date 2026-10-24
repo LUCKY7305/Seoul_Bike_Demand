@@ -1,0 +1,184 @@
+{
+  "A_temporal": {
+    "name": "Feature Set A (Temporal Only)",
+    "num_features": [
+      "Hour",
+      "day_of_week",
+      "month",
+      "day_of_month",
+      "day_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos"
+    ],
+    "cat_features": [],
+    "total_input_cols": 10,
+    "description": "Diurnal, day-of-week, and annual cyclical features only."
+  },
+  "A_temporal_cat": {
+    "name": "Feature Set A + Categorical",
+    "num_features": [
+      "Hour",
+      "day_of_week",
+      "month",
+      "day_of_month",
+      "day_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos"
+    ],
+    "cat_features": [
+      "Seasons",
+      "Holiday"
+    ],
+    "total_input_cols": 12,
+    "description": "Temporal features plus Seasons and Holiday categoricals."
+  },
+  "B_weather": {
+    "name": "Feature Set B (Weather Only)",
+    "num_features": [
+      "Temperature(\u00b0C)",
+      "Humidity(%)",
+      "Wind speed (m/s)",
+      "Visibility (10m)",
+      "Dew point temperature(\u00b0C)",
+      "Solar Radiation (MJ/m2)",
+      "Rainfall(mm)",
+      "Snowfall (cm)"
+    ],
+    "cat_features": [],
+    "total_input_cols": 8,
+    "description": "Continuous meteorological measurements only."
+  },
+  "B_weather_cat": {
+    "name": "Feature Set B + Categorical",
+    "num_features": [
+      "Temperature(\u00b0C)",
+      "Humidity(%)",
+      "Wind speed (m/s)",
+      "Visibility (10m)",
+      "Dew point temperature(\u00b0C)",
+      "Solar Radiation (MJ/m2)",
+      "Rainfall(mm)",
+      "Snowfall (cm)"
+    ],
+    "cat_features": [
+      "Seasons",
+      "Holiday"
+    ],
+    "total_input_cols": 10,
+    "description": "Weather measurements plus Seasons and Holiday categoricals."
+  },
+  "C_combined": {
+    "name": "Feature Set C (Temporal + Weather)",
+    "num_features": [
+      "Hour",
+      "day_of_week",
+      "month",
+      "day_of_month",
+      "day_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "Temperature(\u00b0C)",
+      "Humidity(%)",
+      "Wind speed (m/s)",
+      "Visibility (10m)",
+      "Dew point temperature(\u00b0C)",
+      "Solar Radiation (MJ/m2)",
+      "Rainfall(mm)",
+      "Snowfall (cm)"
+    ],
+    "cat_features": [],
+    "total_input_cols": 18,
+    "description": "All continuous temporal and weather features."
+  },
+  "C_combined_cat": {
+    "name": "Feature Set C + Categorical",
+    "num_features": [
+      "Hour",
+      "day_of_week",
+      "month",
+      "day_of_month",
+      "day_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "Temperature(\u00b0C)",
+      "Humidity(%)",
+      "Wind speed (m/s)",
+      "Visibility (10m)",
+      "Dew point temperature(\u00b0C)",
+      "Solar Radiation (MJ/m2)",
+      "Rainfall(mm)",
+      "Snowfall (cm)"
+    ],
+    "cat_features": [
+      "Seasons",
+      "Holiday"
+    ],
+    "total_input_cols": 20,
+    "description": "All continuous features plus Seasons and Holiday."
+  },
+  "D_reduced": {
+    "name": "Feature Set D (Reduced Collinearity)",
+    "num_features": [
+      "Hour",
+      "day_of_week",
+      "month",
+      "day_of_month",
+      "day_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "Temperature(\u00b0C)",
+      "Humidity(%)",
+      "Wind speed (m/s)",
+      "Visibility (10m)",
+      "Solar Radiation (MJ/m2)",
+      "Rainfall(mm)",
+      "Snowfall (cm)"
+    ],
+    "cat_features": [],
+    "total_input_cols": 17,
+    "description": "Feature Set C omitting Dew point temperature (r=0.9128 with Temp)."
+  },
+  "D_reduced_cat": {
+    "name": "Feature Set D + Categorical",
+    "num_features": [
+      "Hour",
+      "day_of_week",
+      "month",
+      "day_of_month",
+      "day_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "Temperature(\u00b0C)",
+      "Humidity(%)",
+      "Wind speed (m/s)",
+      "Visibility (10m)",
+      "Solar Radiation (MJ/m2)",
+      "Rainfall(mm)",
+      "Snowfall (cm)"
+    ],
+    "cat_features": [
+      "Seasons",
+      "Holiday"
+    ],
+    "total_input_cols": 19,
+    "description": "Feature Set D plus Seasons and Holiday."
+  }
+}

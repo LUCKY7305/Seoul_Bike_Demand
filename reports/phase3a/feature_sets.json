@@ -1,0 +1,70 @@
+{
+  "FEATURE_SET_A_TEMPORAL": [
+    "Hour",
+    "day_of_week",
+    "month",
+    "day_of_month",
+    "day_of_year",
+    "is_weekend",
+    "hour_sin",
+    "hour_cos",
+    "month_sin",
+    "month_cos"
+  ],
+  "FEATURE_SET_B_WEATHER": [
+    "Temperature(\u00b0C)",
+    "Humidity(%)",
+    "Wind speed (m/s)",
+    "Visibility (10m)",
+    "Dew point temperature(\u00b0C)",
+    "Solar Radiation (MJ/m2)",
+    "Rainfall(mm)",
+    "Snowfall (cm)"
+  ],
+  "FEATURE_SET_C_TEMPORAL_WEATHER": [
+    "Hour",
+    "day_of_week",
+    "month",
+    "day_of_month",
+    "day_of_year",
+    "is_weekend",
+    "hour_sin",
+    "hour_cos",
+    "month_sin",
+    "month_cos",
+    "Temperature(\u00b0C)",
+    "Humidity(%)",
+    "Wind speed (m/s)",
+    "Visibility (10m)",
+    "Dew point temperature(\u00b0C)",
+    "Solar Radiation (MJ/m2)",
+    "Rainfall(mm)",
+    "Snowfall (cm)"
+  ],
+  "FEATURE_SET_D_REDUCED_COLLINEARITY": [
+    "Hour",
+    "day_of_week",
+    "month",
+    "day_of_month",
+    "day_of_year",
+    "is_weekend",
+    "hour_sin",
+    "hour_cos",
+    "month_sin",
+    "month_cos",
+    "Temperature(\u00b0C)",
+    "Humidity(%)",
+    "Wind speed (m/s)",
+    "Visibility (10m)",
+    "Solar Radiation (MJ/m2)",
+    "Rainfall(mm)",
+    "Snowfall (cm)"
+  ],
+  "CATEGORICAL_FEATURES": [
+    "Seasons",
+    "Holiday"
+  ],
+  "SCENARIO_FEATURES": [
+    "Functioning Day"
+  ]
+}

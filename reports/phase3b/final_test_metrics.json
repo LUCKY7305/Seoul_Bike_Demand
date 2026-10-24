@@ -1,0 +1,58 @@
+{
+  "evaluation_timestamp": "2026-10-22T23:13:14.685909",
+  "champion_pipeline_artifact": "models\\phase3b_champion_pipeline.joblib",
+  "champion_pipeline_md5": "1000468ebd831efa8643731c99c83648",
+  "refit_training_samples": 7247,
+  "champion_model_family": "GradientBoosting",
+  "feature_config": "C_combined_cat",
+  "scenario_a_operational_test": {
+    "evaluation_population": "test.csv where Functioning Day == 'Yes'",
+    "test_samples": 1218,
+    "champion_model": {
+      "n_samples": 1218,
+      "mae": 260.9448,
+      "rmse": 368.5554,
+      "r2": 0.5432
+    },
+    "baseline_1_training_mean": {
+      "training_mean_value": 655.0307,
+      "n_samples": 1218,
+      "mae": 447.4866,
+      "rmse": 578.8899,
+      "r2": -0.1269
+    },
+    "baseline_2_hourly_mean": {
+      "n_samples": 1218,
+      "mae": 300.7086,
+      "rmse": 413.2331,
+      "r2": 0.4258
+    },
+    "mae_improvement_vs_hourly_base": 39.76,
+    "rmse_improvement_vs_hourly_base": 44.68,
+    "pct_rmse_improvement": 10.81
+  },
+  "scenario_b_full_timeline_test": {
+    "evaluation_population": "test.csv complete timeline (all 1,314 hours)",
+    "test_samples": 1314,
+    "operational_rule": "Predict 0 if Functioning Day == 'No', else champion model",
+    "champion_with_closure_rule": {
+      "n_samples": 1314,
+      "mae": 241.8803,
+      "rmse": 354.8368,
+      "r2": 0.612
+    },
+    "baseline_3_closure_plus_mean": {
+      "n_samples": 1314,
+      "mae": 414.7935,
+      "rmse": 557.3422,
+      "r2": 0.0427
+    },
+    "baseline_3_closure_plus_hourly": {
+      "n_samples": 1314,
+      "mae": 278.739,
+      "rmse": 397.8516,
+      "r2": 0.5122
+    },
+    "pct_rmse_improvement_vs_closure_hourly": 10.81
+  }
+}

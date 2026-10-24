@@ -1,0 +1,198 @@
+{
+  "project": "Vehicle Rental Demand Prediction Using Weather and Temporal Features",
+  "phase": "Phase 3A \u2014 Experimental Design, Chronological Splitting, and Baselines",
+  "timestamp": "2026-10-22T20:55:15.755866",
+  "dataset_verification": {
+    "n_rows": 8760,
+    "n_cols": 23,
+    "target": "Rented Bike Count",
+    "date_min": "2017-12-01",
+    "date_max": "2018-11-30",
+    "total_zeros": 295,
+    "zeros_functioning_no": 295,
+    "zeros_functioning_yes": 0,
+    "temp_col": "Temperature(\u00b0C)",
+    "dew_col": "Dew point temperature(\u00b0C)",
+    "temp_dew_correlation": 0.9128
+  },
+  "split_metadata": {
+    "total_rows": 8760,
+    "target_column": "Rented Bike Count",
+    "train_partition": {
+      "name": "train",
+      "row_count": 6132,
+      "percentage": 70.0,
+      "start_timestamp": "2017-12-01 00:00",
+      "end_timestamp": "2018-08-13 11:00",
+      "functioning_yes_count": 6084,
+      "functioning_no_count": 48,
+      "zero_demand_count": 48,
+      "target_mean": 649.9,
+      "target_median": 396.5,
+      "target_std": 635.92,
+      "target_min": 0.0,
+      "target_max": 3556.0,
+      "operational_target_mean": 655.03
+    },
+    "validation_partition": {
+      "name": "validation",
+      "row_count": 1314,
+      "percentage": 15.0,
+      "start_timestamp": "2018-08-13 12:00",
+      "end_timestamp": "2018-10-07 05:00",
+      "functioning_yes_count": 1163,
+      "functioning_no_count": 151,
+      "zero_demand_count": 151,
+      "target_mean": 877.22,
+      "target_median": 789.5,
+      "target_std": 715.25,
+      "target_min": 0.0,
+      "target_max": 3298.0,
+      "operational_target_mean": 991.11
+    },
+    "test_partition": {
+      "name": "test",
+      "row_count": 1314,
+      "percentage": 15.0,
+      "start_timestamp": "2018-10-07 06:00",
+      "end_timestamp": "2018-11-30 23:00",
+      "functioning_yes_count": 1218,
+      "functioning_no_count": 96,
+      "zero_demand_count": 96,
+      "target_mean": 787.25,
+      "target_median": 752.0,
+      "target_std": 569.86,
+      "target_min": 0.0,
+      "target_max": 2787.0,
+      "operational_target_mean": 849.3
+    },
+    "proportions": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "input_file_path": "data/processed/seoul_bike_processed.csv",
+    "input_file_md5": "9251a72899f95cb80a5a888b7810794e",
+    "train_file_md5": "a673224132856d3f494aabcffd844ebc",
+    "validation_file_md5": "580be235f097f84ed39d0563f6d8f13f",
+    "test_file_md5": "3aedb7e6d44b2ecbc46f8402243b0efc",
+    "generated_at": "2026-10-22T20:55:15.658622"
+  },
+  "feature_sets": {
+    "FEATURE_SET_A_TEMPORAL": [
+      "Hour",
+      "day_of_week",
+      "month",
+      "day_of_month",
+      "day_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos"
+    ],
+    "FEATURE_SET_B_WEATHER": [
+      "Temperature(\u00b0C)",
+      "Humidity(%)",
+      "Wind speed (m/s)",
+      "Visibility (10m)",
+      "Dew point temperature(\u00b0C)",
+      "Solar Radiation (MJ/m2)",
+      "Rainfall(mm)",
+      "Snowfall (cm)"
+    ],
+    "FEATURE_SET_C_TEMPORAL_WEATHER": [
+      "Hour",
+      "day_of_week",
+      "month",
+      "day_of_month",
+      "day_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "Temperature(\u00b0C)",
+      "Humidity(%)",
+      "Wind speed (m/s)",
+      "Visibility (10m)",
+      "Dew point temperature(\u00b0C)",
+      "Solar Radiation (MJ/m2)",
+      "Rainfall(mm)",
+      "Snowfall (cm)"
+    ],
+    "FEATURE_SET_D_REDUCED_COLLINEARITY": [
+      "Hour",
+      "day_of_week",
+      "month",
+      "day_of_month",
+      "day_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "Temperature(\u00b0C)",
+      "Humidity(%)",
+      "Wind speed (m/s)",
+      "Visibility (10m)",
+      "Solar Radiation (MJ/m2)",
+      "Rainfall(mm)",
+      "Snowfall (cm)"
+    ],
+    "CATEGORICAL_FEATURES": [
+      "Seasons",
+      "Holiday"
+    ],
+    "SCENARIO_FEATURES": [
+      "Functioning Day"
+    ]
+  },
+  "validation_baseline_results": {
+    "scenario_a_operational": {
+      "evaluation_population": "Functioning Day == 'Yes'",
+      "validation_samples": 1163,
+      "baseline_1_training_mean": {
+        "strategy": "Constant operating training mean",
+        "training_mean_value": 655.0307,
+        "n_samples": 1163,
+        "mae": 588.374,
+        "rmse": 760.0241,
+        "r2": -0.2431
+      },
+      "baseline_2_hourly_mean": {
+        "strategy": "Hour-of-day mean lookup from operating training data",
+        "n_samples": 1163,
+        "mae": 473.9518,
+        "rmse": 600.9553,
+        "r2": 0.2228
+      }
+    },
+    "scenario_b_end_to_end": {
+      "evaluation_population": "Complete held-out validation timeline",
+      "validation_samples": 1314,
+      "baseline_3_closure_rule_with_mean": {
+        "strategy": "Predict 0 if Functioning Day == 'No', else training mean",
+        "n_samples": 1314,
+        "mae": 520.7602,
+        "rmse": 715.0222,
+        "r2": -0.0001
+      },
+      "baseline_3_closure_rule_with_hourly": {
+        "strategy": "Predict 0 if Functioning Day == 'No', else hour-of-day mean",
+        "n_samples": 1314,
+        "mae": 419.487,
+        "rmse": 565.372,
+        "r2": 0.3747
+      }
+    },
+    "test_set_status": "Strictly held out; zero test metrics calculated in Phase 3A."
+  },
+  "test_set_policy": "Strictly held out. Zero predictions or evaluation metrics computed on test split in Phase 3A.",
+  "phase_3b_models_planned": [
+    "Linear Regression (Ridge)",
+    "Decision Tree Regressor",
+    "Random Forest Regressor",
+    "Gradient Boosting / XGBoost Regressor"
+  ]
+}

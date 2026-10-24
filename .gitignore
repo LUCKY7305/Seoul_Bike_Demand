@@ -1,0 +1,48 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python byte-code and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Testing cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE and editor settings
+.vscode/
+.idea/
+.agents/
+.claude/
+*.swp
+*.swo
+*~
+
+# OS-generated files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Environment and secrets
+.env
+.env.local
+*.env
+.streamlit/secrets.toml
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Logs
+*.log

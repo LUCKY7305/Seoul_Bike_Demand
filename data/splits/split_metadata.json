@@ -1,0 +1,63 @@
+{
+  "total_rows": 8760,
+  "target_column": "Rented Bike Count",
+  "train_partition": {
+    "name": "train",
+    "row_count": 6132,
+    "percentage": 70.0,
+    "start_timestamp": "2017-12-01 00:00",
+    "end_timestamp": "2018-08-13 11:00",
+    "functioning_yes_count": 6084,
+    "functioning_no_count": 48,
+    "zero_demand_count": 48,
+    "target_mean": 649.9,
+    "target_median": 396.5,
+    "target_std": 635.92,
+    "target_min": 0.0,
+    "target_max": 3556.0,
+    "operational_target_mean": 655.03
+  },
+  "validation_partition": {
+    "name": "validation",
+    "row_count": 1314,
+    "percentage": 15.0,
+    "start_timestamp": "2018-08-13 12:00",
+    "end_timestamp": "2018-10-07 05:00",
+    "functioning_yes_count": 1163,
+    "functioning_no_count": 151,
+    "zero_demand_count": 151,
+    "target_mean": 877.22,
+    "target_median": 789.5,
+    "target_std": 715.25,
+    "target_min": 0.0,
+    "target_max": 3298.0,
+    "operational_target_mean": 991.11
+  },
+  "test_partition": {
+    "name": "test",
+    "row_count": 1314,
+    "percentage": 15.0,
+    "start_timestamp": "2018-10-07 06:00",
+    "end_timestamp": "2018-11-30 23:00",
+    "functioning_yes_count": 1218,
+    "functioning_no_count": 96,
+    "zero_demand_count": 96,
+    "target_mean": 787.25,
+    "target_median": 752.0,
+    "target_std": 569.86,
+    "target_min": 0.0,
+    "target_max": 2787.0,
+    "operational_target_mean": 849.3
+  },
+  "proportions": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "input_file_path": "data/processed/seoul_bike_processed.csv",
+  "input_file_md5": "9251a72899f95cb80a5a888b7810794e",
+  "train_file_md5": "a673224132856d3f494aabcffd844ebc",
+  "validation_file_md5": "580be235f097f84ed39d0563f6d8f13f",
+  "test_file_md5": "3aedb7e6d44b2ecbc46f8402243b0efc",
+  "generated_at": "2026-10-22T20:55:15.658622"
+}

@@ -1,0 +1,84 @@
+{
+  "selection_status": "LOCKED",
+  "lock_timestamp": "2026-10-22T23:13:10.593405",
+  "primary_selection_metric": "val_rmse (ascending)",
+  "secondary_selection_metric": "val_mae (ascending)",
+  "champion_candidate_id": "GradientBoosting__default_100__C_combined_cat",
+  "model_family": "GradientBoosting",
+  "model_tag": "default_100",
+  "hyperparameters": {
+    "n_estimators": 100,
+    "learning_rate": 0.1,
+    "max_depth": 3
+  },
+  "feature_config": "C_combined_cat",
+  "feature_config_name": "Feature Set C + Categorical",
+  "numerical_features": [
+    "Hour",
+    "day_of_week",
+    "month",
+    "day_of_month",
+    "day_of_year",
+    "is_weekend",
+    "hour_sin",
+    "hour_cos",
+    "month_sin",
+    "month_cos",
+    "Temperature(\u00b0C)",
+    "Humidity(%)",
+    "Wind speed (m/s)",
+    "Visibility (10m)",
+    "Dew point temperature(\u00b0C)",
+    "Solar Radiation (MJ/m2)",
+    "Rainfall(mm)",
+    "Snowfall (cm)"
+  ],
+  "categorical_features": [
+    "Seasons",
+    "Holiday"
+  ],
+  "validation_metrics": {
+    "val_samples": 1163,
+    "val_rmse": 321.58,
+    "val_mae": 237.54,
+    "val_r2": 0.7775,
+    "pct_rmse_improvement_vs_hourly_base": 46.49
+  },
+  "ranking_context": {
+    "total_candidates_evaluated": 120,
+    "successful_candidates": 120,
+    "top_5_candidates": [
+      {
+        "candidate_id": "GradientBoosting__default_100__C_combined_cat",
+        "val_rmse": 321.58,
+        "val_mae": 237.54,
+        "val_r2": 0.7775
+      },
+      {
+        "candidate_id": "GradientBoosting__default_100__C_combined",
+        "val_rmse": 321.64,
+        "val_mae": 237.42,
+        "val_r2": 0.7774
+      },
+      {
+        "candidate_id": "RandomForest__depth_10__C_combined_cat",
+        "val_rmse": 333.46,
+        "val_mae": 236.39,
+        "val_r2": 0.7607
+      },
+      {
+        "candidate_id": "GradientBoosting__default_100__D_reduced",
+        "val_rmse": 333.61,
+        "val_mae": 244.32,
+        "val_r2": 0.7605
+      },
+      {
+        "candidate_id": "GradientBoosting__depth_5__C_combined",
+        "val_rmse": 333.75,
+        "val_mae": 238.46,
+        "val_r2": 0.7603
+      }
+    ]
+  },
+  "test_evaluation_authorized": true
+}
